@@ -1,0 +1,12 @@
+﻿@model User
+@{
+    ViewData["Title"] = "Настройки аккаунта";
+}
+
+<div class="container px-4 py-5" id="hanging-icons">
+    <h3 class="pb-2 border-bottom">Настройки аккаунта - @Model.UserName</h3>
+    <div class="list-group">
+        <a class="list-group-item list-group-item-action" asp-controller="Admin" asp-action="Edit" asp-route-id="@Model.Id">Изменить личные данные</a>
+        <a class="list-group-item list-group-item-action" asp-controller="Account" asp-action="ChangePassword" asp-route-id="@Model.Id">Изменить пароль</a>
+    </div>
+</div>
